@@ -21,13 +21,13 @@ public class ForgotPasswordPage extends BaseActionElement {
         PageFactory.initElements(Browser.getCurrentDriver(), this);
     }
 
-    public void BotaoRecuperarSenha() {
+    public void ButtonForgotPassword() {
         buttonForgotPassword.click();
     }
-    public String RetornarMensagemRecuperarEmail() {
+    public String ReturnRecoveryEmailMessage() {
         return returnRecoveryEmailMessage.getText();
     }
-    public void CompletarEmail(String text) {
+    public void AddRecoveryEmail(String text) {
         addRecoveryEmail.sendKeys(text);
     }
 }

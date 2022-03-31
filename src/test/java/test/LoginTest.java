@@ -79,9 +79,9 @@ public class LoginTest extends BaseTest {
         //Tela login
         loginpage.BotaoEsquecerSenha();
         //Tela recuperar senha
-        forgotpassword.CompletarEmail("luiz@mail.com");
-        forgotpassword.BotaoRecuperarSenha();
-        assertTrue(forgotpassword.RetornarMensagemRecuperarEmail().contains("A confirmation email has been sent to your address: luiz@mail.com"));
+        forgotpassword.AddRecoveryEmail("luiz@mail.com");
+        forgotpassword.ButtonForgotPassword();
+        assertTrue(forgotpassword.ReturnRecoveryEmailMessage().contains("A confirmation email has been sent to your address: luiz@mail.com"));
     }
 
     @Test
