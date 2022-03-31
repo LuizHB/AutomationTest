@@ -37,20 +37,20 @@ public class AutomationSample {
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://automationpractice.com/index.php");
-        WebElement signinBotao = driver.findElement(By.xpath("//a[contains(text(),'Sign in')]"));
-        signinBotao.click();
+        WebElement buttonSignIn = driver.findElement(By.xpath("//a[contains(text(),'Sign in')]"));
+        buttonSignIn.click();
 
         WebElement email = driver.findElement(By.id("email"));
-        WebElement senha = driver.findElement(By.id("passwd"));
+        WebElement password = driver.findElement(By.id("passwd"));
 
         email.sendKeys("");
 
-        WebElement logarBotao = driver.findElement(By.id("SubmitLogin"));
-        logarBotao.click();
+        WebElement loginButton = driver.findElement(By.id("SubmitLogin"));
+        loginButton.click();
 
-        WebElement mensagem = driver.findElement(By.xpath("//*[@id='center_column']/div[1]/ol/li"));
-        //email vazio
-        assertTrue("Email vazio", mensagem.getText().contains("An email address required."));
+        WebElement errorMessage = driver.findElement(By.xpath("//*[@id='center_column']/div[1]/ol/li"));
+        //Test to check if email is blank
+        assertTrue("Blank Email!", errorMessage.getText().contains("An email address required."));
 
         driver.quit();
     }
@@ -61,21 +61,21 @@ public class AutomationSample {
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://automationpractice.com/index.php");
-        WebElement signinBotao = driver.findElement(By.xpath("//a[contains(text(),'Sign in')]"));
-        signinBotao.click();
+        WebElement buttonSignIn = driver.findElement(By.xpath("//a[contains(text(),'Sign in')]"));
+        buttonSignIn.click();
 
         WebElement email = driver.findElement(By.id("email"));
-        WebElement senha = driver.findElement(By.id("passwd"));
+        WebElement password = driver.findElement(By.id("passwd"));
 
         email.sendKeys("luiz@mail.com");
-        senha.sendKeys("");
+        password.sendKeys("");
 
-        WebElement logarBotao = driver.findElement(By.id("SubmitLogin"));
-        logarBotao.click();
+        WebElement loginButton = driver.findElement(By.id("SubmitLogin"));
+        loginButton.click();
 
-        WebElement mensagem = driver.findElement(By.xpath("//*[@id='center_column']/div[1]/ol/li"));
-        //senha vazio
-        assertTrue("Senha vazia", mensagem.getText().contains("Password is required."));
+        WebElement errorMessage = driver.findElement(By.xpath("//*[@id='center_column']/div[1]/ol/li"));
+        //Test to check if password is blank
+        assertTrue("Blank Password!", errorMessage.getText().contains("Password is required."));
 
         driver.quit();
     }
@@ -86,21 +86,21 @@ public class AutomationSample {
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://automationpractice.com/index.php");
-        WebElement signinBotao = driver.findElement(By.xpath("//a[contains(text(),'Sign in')]"));
-        signinBotao.click();
+        WebElement buttonSignIn = driver.findElement(By.xpath("//a[contains(text(),'Sign in')]"));
+        buttonSignIn.click();
 
         WebElement email = driver.findElement(By.id("email"));
-        WebElement senha = driver.findElement(By.id("passwd"));
+        WebElement password = driver.findElement(By.id("passwd"));
 
         email.sendKeys("lus@ail.com");
-        senha.sendKeys("123456");
+        password.sendKeys("123456");
 
-        WebElement logarBotao = driver.findElement(By.id("SubmitLogin"));
-        logarBotao.click();
+        WebElement loginButton = driver.findElement(By.id("SubmitLogin"));
+        loginButton.click();
 
-        WebElement mensagem = driver.findElement(By.xpath("//*[@id='center_column']/div[1]/ol/li"));
-        //email errado
-        assertTrue("email errado", mensagem.getText().contains("Authentication failed."));
+        WebElement errorMessage = driver.findElement(By.xpath("//*[@id='center_column']/div[1]/ol/li"));
+        //Test to check if email is wrong
+        assertTrue("Wrong Email!", errorMessage.getText().contains("Authentication failed."));
         driver.quit();
     }
 
@@ -110,21 +110,21 @@ public class AutomationSample {
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://automationpractice.com/index.php");
-        WebElement signinBotao = driver.findElement(By.xpath("//a[contains(text(),'Sign in')]"));
-        signinBotao.click();
+        WebElement buttonSignIn = driver.findElement(By.xpath("//a[contains(text(),'Sign in')]"));
+        buttonSignIn.click();
 
         WebElement email = driver.findElement(By.id("email"));
-        WebElement senha = driver.findElement(By.id("passwd"));
+        WebElement password = driver.findElement(By.id("passwd"));
 
         email.sendKeys("luiz@mail.com");
-        senha.sendKeys("1255555");
+        password.sendKeys("1255555");
 
-        WebElement logarBotao = driver.findElement(By.id("SubmitLogin"));
-        logarBotao.click();
+        WebElement loginButton = driver.findElement(By.id("SubmitLogin"));
+        loginButton.click();
 
-        WebElement mensagem = driver.findElement(By.xpath("//*[@id='center_column']/div[1]/ol/li"));
-        // senha errada
-        assertTrue("senha errada", mensagem.getText().contains("Authentication failed."));
+        WebElement errorMessage = driver.findElement(By.xpath("//*[@id='center_column']/div[1]/ol/li"));
+        //Test to check if password is wrong
+        assertTrue("Wrong Password!", errorMessage.getText().contains("Authentication failed."));
         driver.quit();
     }
 
@@ -134,8 +134,8 @@ public class AutomationSample {
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://automationpractice.com/index.php");
-        WebElement signinBotao = driver.findElement(By.xpath("//*[@id='login_form']/div/p[1]/a"));
-        signinBotao.click();
+        WebElement buttonSignIn = driver.findElement(By.xpath("//*[@id='login_form']/div/p[1]/a"));
+        buttonSignIn.click();
 
         WebElement esquecerSenha = driver.findElement(By.xpath("//a[contains(text(),'Forgot your password?')]"));
         esquecerSenha.click();
@@ -143,12 +143,12 @@ public class AutomationSample {
         WebElement email = driver.findElement(By.xpath("//*[@id='email']"));
         email.sendKeys("luiz@mail.com");
 
-        WebElement botaoRetrieve = driver.findElement(By.xpath("//*[@id='form_forgotpassword']/fieldset/p/button"));
-        botaoRetrieve.click();
+        WebElement buttonForgotPassword = driver.findElement(By.xpath("//*[@id='form_forgotpassword']/fieldset/p/button"));
+        buttonForgotPassword.click();
 
-        WebElement mensagem = driver.findElement(By.xpath("//*[@id='center_column']/div/p"));
-        //esqueceu senha
-        assertTrue("Esqueceu a senha", mensagem.getText().contains("A confirmation email has been sent to your address: luiz@mail.com"));
+        WebElement errorMessage = driver.findElement(By.xpath("//*[@id='center_column']/div/p"));
+        //Testo to check if forgotten password gets sent to email
+        assertTrue("Forgot Password!", errorMessage.getText().contains("A confirmation email has been sent to your address: luiz@mail.com"));
         driver.quit();
     }
 }
