@@ -57,52 +57,67 @@ public class CreateAccountPage extends BaseActionElement {
     @FindBy(xpath = "//*[@id='alias']")
     private WebElement addAlias;
 
-    @FindBy(xpath ="//*[@id='submitAccount']")
+    @FindBy(xpath = "//*[@id='submitAccount']")
     private WebElement buttonRegisterAccount;
 
-    @FindBy(xpath ="//*[@id='postcode']")
+    @FindBy(xpath = "//*[@id='postcode']")
     private WebElement addZipCode;
 
-    @FindBy(xpath ="//*[@id='postcode']")
+    @FindBy(xpath = "//*[@id='postcode']")
     private WebElement returnRegistryMessage;
 
-    public CreateAccountPage(){
+    public CreateAccountPage() {
         PageFactory.initElements(Browser.getCurrentDriver(), this);
-}
+    }
 
     public void ButtonMR() {
-        buttonMr.click();}
+        buttonMr.click();
+    }
+
     public void ButtonMRS() {
-        buttonMRS.click();}
+        buttonMRS.click();
+    }
+
     public void BoxNewsletter() {
-        boxNewsletter.click();}
+        boxNewsletter.click();
+    }
+
     public void BoxOffers() {
-        boxOffers.click();}
+        boxOffers.click();
+    }
 
     public void AddFirstName(String text) {
         addFirstName.sendKeys(text);
     }
+
     public void AddLastName(String text) {
         addLastName.sendKeys(text);
     }
+
     public void AddPassword(String text) {
         addPassword.sendKeys(text);
     }
+
     public void AddCompany(String text) {
         addCompany.sendKeys(text);
     }
+
     public void AddAddress(String text) {
         addAddress.sendKeys(text);
     }
+
     public void AddAlias(String text) {
         addAlias.sendKeys(text);
     }
+
     public void AddPhoneNumber(String text) {
         addPhoneNumber.sendKeys(text);
     }
+
     public void AddCity(String text) {
         addCity.sendKeys(text);
     }
+
     public void AddZipCode(String text) {
         addZipCode.sendKeys(text);
     }
@@ -116,17 +131,20 @@ public class CreateAccountPage extends BaseActionElement {
         Select selectObject = new Select(buttonSelectDay);
         selectObject.selectByValue(text);
     }
+
     public void SelectMonth(String text) {
         Select selectObject = new Select(buttonSelectMonth);
         selectObject.selectByValue(text);
     }
+
     public void SelectYear(String text) {
         Select selectObject = new Select(buttonSelectYear);
         selectObject.selectByValue(text);
     }
 
     public void ButtonRegisterAccount() {
-        buttonRegisterAccount.click();}
+        buttonRegisterAccount.click();
+    }
 
 
 }

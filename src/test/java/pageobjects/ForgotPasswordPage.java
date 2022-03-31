@@ -24,9 +24,11 @@ public class ForgotPasswordPage extends BaseActionElement {
     public void ButtonForgotPassword() {
         buttonForgotPassword.click();
     }
+
     public String ReturnRecoveryEmailMessage() {
         return returnRecoveryEmailMessage.getText();
     }
+
     public void AddRecoveryEmail(String text) {
         addRecoveryEmail.sendKeys(text);
     }
