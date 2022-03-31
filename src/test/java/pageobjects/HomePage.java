@@ -9,13 +9,13 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePage extends BaseActionElement {
 
     @FindBy(xpath = "//a[contains(text(),'Sign in') and @class=\"login\"]")
-    private WebElement signin;
+    private WebElement buttonSignIn;
 
     public HomePage() {
         PageFactory.initElements(Browser.getCurrentDriver(), this);
     }
 
-    public void clickMenuLogin() {
-        signin.click();
+    public void ButtonSignIn() {
+        buttonSignIn.click();
     }
 }
