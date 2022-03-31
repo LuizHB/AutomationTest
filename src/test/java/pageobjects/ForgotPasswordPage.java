@@ -9,25 +9,25 @@ import org.openqa.selenium.support.PageFactory;
 public class ForgotPasswordPage extends BaseActionElement {
 
     @FindBy(xpath = "//*[@id='form_forgotpassword']/fieldset/p/button")
-    private WebElement botaoRecuperarSenha;
+    private WebElement buttonForgotPassword;
 
     @FindBy(xpath = "//*[@id='center_column']/div/p")
-    private WebElement retornarMensagemRecuperarEmail;
+    private WebElement returnRecoveryEmailMessage;
 
     @FindBy(xpath = "//*[@id='email']")
-    private WebElement digitarEmailRecuperacao;
+    private WebElement addRecoveryEmail;
 
     public ForgotPasswordPage() {
         PageFactory.initElements(Browser.getCurrentDriver(), this);
     }
 
     public void BotaoRecuperarSenha() {
-        botaoRecuperarSenha.click();
+        buttonForgotPassword.click();
     }
     public String RetornarMensagemRecuperarEmail() {
-        return retornarMensagemRecuperarEmail.getText();
+        return returnRecoveryEmailMessage.getText();
     }
     public void CompletarEmail(String text) {
-        digitarEmailRecuperacao.sendKeys(text);
+        addRecoveryEmail.sendKeys(text);
     }
 }
