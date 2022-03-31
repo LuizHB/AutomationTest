@@ -9,55 +9,55 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage extends BaseActionElement {
 
     @FindBy(id = "email")
-    private WebElement completarEmail;
+    private WebElement addEmail;
 
     @FindBy(id = "passwd")
-    private WebElement completarSenha;
+    private WebElement addPassword;
 
     @FindBy(id = "SubmitLogin")
-    private WebElement botaoLogarConta;
+    private WebElement buttonLoginAccount;
 
     @FindBy(xpath = "//*[@id='login_form']/div/p[1]/a")
-    private WebElement botaoEsquecerSenha;
+    private WebElement buttonForgotPassword;
 
     @FindBy(xpath = "//*[@id='center_column']/div[1]/ol/li")
-    private WebElement retornarMensagemErro;
+    private WebElement returnErrorMessage;
 
     @FindBy(xpath = "//*[@id='SubmitCreate']")
-    private WebElement botaoCriarConta;
+    private WebElement buttonCreateAccount;
 
     @FindBy(xpath = "//*[@id='email_create']")
-    private WebElement completarEmailCadastro;
+    private WebElement addResgistryEmail;
 
     public LoginPage() {
         PageFactory.initElements(Browser.getCurrentDriver(), this);
     }
 
-    public void CompletarEmail(String text) {
-        completarEmail.sendKeys(text);
+    public void AddEmail(String text) {
+        addEmail.sendKeys(text);
     }
 
-    public void CompletarSenha(String text) {
-        completarSenha.sendKeys(text);
+    public void AddPassword(String text) {
+        addPassword.sendKeys(text);
     }
 
-    public void BotaoLogarConta() {
-        botaoLogarConta.click();
+    public void ButtonLoginAccount() {
+        buttonLoginAccount.click();
     }
 
-    public void BotaoEsquecerSenha() {
-        botaoEsquecerSenha.click();
+    public void ButtonForgotPassword() {
+        buttonForgotPassword.click();
     }
 
-    public String RetornarMensagemErro() {
-        return retornarMensagemErro.getText();
+    public String ReturnErrorMessage() {
+        return returnErrorMessage.getText();
     }
 
-    public void BotaoCriarConta() {
-        botaoCriarConta.click();
+    public void ButtonCreateAccount() {
+        buttonCreateAccount.click();
     }
 
-    public void CompletarEmailCadastro(String text) {
-        completarEmailCadastro.sendKeys(text);
+    public void AddResgistryEmail(String text) {
+        addResgistryEmail.sendKeys(text);
     }
 }

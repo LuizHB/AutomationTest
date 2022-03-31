@@ -23,9 +23,9 @@ public class LoginTest extends BaseTest {
         //Tela inicial
         homepage.ButtonSignIn();
         //Tela login
-        loginpage.CompletarEmail("luiz@mail.com");
-        loginpage.CompletarSenha("123456");
-        loginpage.BotaoLogarConta();
+        loginpage.AddEmail("luiz@mail.com");
+        loginpage.AddPassword("123456");
+        loginpage.ButtonLoginAccount();
         assertTrue(getCurrentUrl().contains("/index.php?controller=my-account"));
     }
 
@@ -34,9 +34,9 @@ public class LoginTest extends BaseTest {
         //Tela inicial
         homepage.ButtonSignIn();
         //Tela login
-        loginpage.CompletarEmail("");
-        loginpage.BotaoLogarConta();
-        assertTrue(loginpage.RetornarMensagemErro().contains("An email address required."));
+        loginpage.AddEmail("");
+        loginpage.ButtonLoginAccount();
+        assertTrue(loginpage.ReturnErrorMessage().contains("An email address required."));
     }
 
     @Test
@@ -44,10 +44,10 @@ public class LoginTest extends BaseTest {
         //Tela inicial
         homepage.ButtonSignIn();
         //Tela login
-        loginpage.CompletarEmail("luiz@mail.com");
-        loginpage.CompletarSenha("");
-        loginpage.BotaoLogarConta();
-        assertTrue(loginpage.RetornarMensagemErro().contains("Password is required."));
+        loginpage.AddEmail("luiz@mail.com");
+        loginpage.AddPassword("");
+        loginpage.ButtonLoginAccount();
+        assertTrue(loginpage.ReturnErrorMessage().contains("Password is required."));
     }
 
     @Test
@@ -55,10 +55,10 @@ public class LoginTest extends BaseTest {
         //Tela inicial
         homepage.ButtonSignIn();
         //Tela login
-        loginpage.CompletarEmail("lus@ail.com");
-        loginpage.CompletarSenha("123456");
-        loginpage.BotaoLogarConta();
-        assertTrue(loginpage.RetornarMensagemErro().contains("Authentication failed."));
+        loginpage.AddEmail("lus@ail.com");
+        loginpage.AddPassword("123456");
+        loginpage.ButtonLoginAccount();
+        assertTrue(loginpage.ReturnErrorMessage().contains("Authentication failed."));
     }
 
     @Test
@@ -66,10 +66,10 @@ public class LoginTest extends BaseTest {
         //Tela inicial
         homepage.ButtonSignIn();
         //Tela login
-        loginpage.CompletarEmail("luiz@mail.com");
-        loginpage.CompletarSenha("125555");
-        loginpage.BotaoLogarConta();
-        assertTrue(loginpage.RetornarMensagemErro().contains("Authentication failed."));
+        loginpage.AddEmail("luiz@mail.com");
+        loginpage.AddPassword("125555");
+        loginpage.ButtonLoginAccount();
+        assertTrue(loginpage.ReturnErrorMessage().contains("Authentication failed."));
     }
 
     @Test
@@ -77,7 +77,7 @@ public class LoginTest extends BaseTest {
         //Tela inicial
         homepage.ButtonSignIn();
         //Tela login
-        loginpage.BotaoEsquecerSenha();
+        loginpage.ButtonForgotPassword();
         //Tela recuperar senha
         forgotpassword.AddRecoveryEmail("luiz@mail.com");
         forgotpassword.ButtonForgotPassword();
@@ -90,8 +90,8 @@ public class LoginTest extends BaseTest {
         homepage.ButtonSignIn();
         //Tela login
         String emailTeste = "teste" + random.nextInt() + "@mail.com";
-        loginpage.CompletarEmailCadastro(emailTeste);
-        loginpage.BotaoCriarConta();
+        loginpage.AddResgistryEmail(emailTeste);
+        loginpage.ButtonCreateAccount();
         //tela de cadastro
         createaccount.ButtonMR();
         createaccount.AddFirstName("Master");
