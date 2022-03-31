@@ -20,9 +20,9 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void successfulLogin() {
-        //Tela inicial
+        //Home Page
         homepage.ButtonSignIn();
-        //Tela login
+        //Login Page
         loginpage.AddEmail("luiz@mail.com");
         loginpage.AddPassword("123456");
         loginpage.ButtonLoginAccount();
@@ -31,9 +31,9 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void identificarEmailVazio() {
-        //Tela inicial
+        //Home Page
         homepage.ButtonSignIn();
-        //Tela login
+        //Login Page
         loginpage.AddEmail("");
         loginpage.ButtonLoginAccount();
         assertTrue(loginpage.ReturnErrorMessage().contains("An email address required."));
@@ -41,9 +41,9 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void identificarSenhaVazia() {
-        //Tela inicial
+        //Home Page
         homepage.ButtonSignIn();
-        //Tela login
+        //Login Page
         loginpage.AddEmail("luiz@mail.com");
         loginpage.AddPassword("");
         loginpage.ButtonLoginAccount();
@@ -52,9 +52,9 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void identificarEmailErrado() {
-        //Tela inicial
+        //Home Page
         homepage.ButtonSignIn();
-        //Tela login
+        //Login Page
         loginpage.AddEmail("lus@ail.com");
         loginpage.AddPassword("123456");
         loginpage.ButtonLoginAccount();
@@ -63,9 +63,9 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void identificarSenhaErrada() {
-        //Tela inicial
+        //Home Page
         homepage.ButtonSignIn();
-        //Tela login
+        //Login Page
         loginpage.AddEmail("luiz@mail.com");
         loginpage.AddPassword("125555");
         loginpage.ButtonLoginAccount();
@@ -74,9 +74,9 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void esquecerSenha() {
-        //Tela inicial
+        //Home Page
         homepage.ButtonSignIn();
-        //Tela login
+        //Login Page
         loginpage.ButtonForgotPassword();
         //Tela recuperar senha
         forgotpassword.AddRecoveryEmail("luiz@mail.com");
@@ -86,13 +86,13 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void criarCadastro() {
-        //Tela inicial
+        //Home Page
         homepage.ButtonSignIn();
-        //Tela login
+        //Login Page
         String emailTeste = "teste" + random.nextInt() + "@mail.com";
         loginpage.AddResgistryEmail(emailTeste);
         loginpage.ButtonCreateAccount();
-        //tela de cadastro
+        //Registry Page
         createaccount.ButtonMR();
         createaccount.AddFirstName("Master");
         createaccount.AddLastName("Blast");
