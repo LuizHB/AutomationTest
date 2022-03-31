@@ -11,13 +11,13 @@ A sample with the methods without using the project plan can be found in /src/te
 
 The main method of the project plan is found in /src/test/java/test/LoginTest.java
 
- ##List of tests:
+## List of tests:
 - Successful login
 - Unsuccessful login
 - Recovery of forgotten password
 - Account creation
 
-###Unsuccessful login tests with:
+### Unsuccessful login tests with:
 
 - Blank email 
 - Blank password
