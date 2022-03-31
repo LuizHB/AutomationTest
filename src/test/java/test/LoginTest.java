@@ -30,7 +30,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void identificarEmailVazio() {
+    public void identifyBlankEmail() {
         //Home Page
         homepage.ButtonSignIn();
         //Login Page
@@ -40,7 +40,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void identificarSenhaVazia() {
+    public void identifyBlankPassword() {
         //Home Page
         homepage.ButtonSignIn();
         //Login Page
@@ -51,7 +51,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void identificarEmailErrado() {
+    public void identifyWrongEmail() {
         //Home Page
         homepage.ButtonSignIn();
         //Login Page
@@ -62,7 +62,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void identificarSenhaErrada() {
+    public void identifyWrongPassword() {
         //Home Page
         homepage.ButtonSignIn();
         //Login Page
@@ -73,19 +73,19 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void esquecerSenha() {
+    public void forgotPassword() {
         //Home Page
         homepage.ButtonSignIn();
         //Login Page
         loginpage.ButtonForgotPassword();
-        //Tela recuperar senha
+        //Forgot Password Page
         forgotpassword.AddRecoveryEmail("luiz@mail.com");
         forgotpassword.ButtonForgotPassword();
         assertTrue(forgotpassword.ReturnRecoveryEmailMessage().contains("A confirmation email has been sent to your address: luiz@mail.com"));
     }
 
     @Test
-    public void criarCadastro() {
+    public void createAccount() {
         //Home Page
         homepage.ButtonSignIn();
         //Login Page
