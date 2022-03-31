@@ -32,7 +32,7 @@ public class AutomationSample {
     }
 
     @Test
-    public void identificarEmailVazio() {
+    public void identifyBlankEmail() {
         setProperty("webdriver.chrome.driver", "C:\\Users\\Pc\\Documents\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
@@ -56,7 +56,7 @@ public class AutomationSample {
     }
 
     @Test
-    public void identificarSenhaVazia() {
+    public void identifyBlankPassword() {
         setProperty("webdriver.chrome.driver", "C:\\Users\\Pc\\Documents\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
@@ -81,7 +81,7 @@ public class AutomationSample {
     }
 
     @Test
-    public void identificarEmailErrado() {
+    public void identifyWrongEmail() {
         setProperty("webdriver.chrome.driver", "C:\\Users\\Pc\\Documents\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
@@ -105,7 +105,7 @@ public class AutomationSample {
     }
 
     @Test
-    public void identificarSenhaErrada() {
+    public void identifyWrongPassword() {
         setProperty("webdriver.chrome.driver", "C:\\Users\\Pc\\Documents\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
@@ -129,7 +129,7 @@ public class AutomationSample {
     }
 
     @Test
-    public void esquecerSenha() {
+    public void forgotPassword() {
         setProperty("webdriver.chrome.driver", "C:\\Users\\Pc\\Documents\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
