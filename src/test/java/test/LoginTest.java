@@ -21,7 +21,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void successfulLogin() {
         //Tela inicial
-        homepage.clickMenuLogin();
+        homepage.ButtonSignIn();
         //Tela login
         loginpage.CompletarEmail("luiz@mail.com");
         loginpage.CompletarSenha("123456");
@@ -32,7 +32,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void identificarEmailVazio() {
         //Tela inicial
-        homepage.clickMenuLogin();
+        homepage.ButtonSignIn();
         //Tela login
         loginpage.CompletarEmail("");
         loginpage.BotaoLogarConta();
@@ -42,7 +42,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void identificarSenhaVazia() {
         //Tela inicial
-        homepage.clickMenuLogin();
+        homepage.ButtonSignIn();
         //Tela login
         loginpage.CompletarEmail("luiz@mail.com");
         loginpage.CompletarSenha("");
@@ -53,7 +53,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void identificarEmailErrado() {
         //Tela inicial
-        homepage.clickMenuLogin();
+        homepage.ButtonSignIn();
         //Tela login
         loginpage.CompletarEmail("lus@ail.com");
         loginpage.CompletarSenha("123456");
@@ -64,7 +64,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void identificarSenhaErrada() {
         //Tela inicial
-        homepage.clickMenuLogin();
+        homepage.ButtonSignIn();
         //Tela login
         loginpage.CompletarEmail("luiz@mail.com");
         loginpage.CompletarSenha("125555");
@@ -75,7 +75,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void esquecerSenha() {
         //Tela inicial
-        homepage.clickMenuLogin();
+        homepage.ButtonSignIn();
         //Tela login
         loginpage.BotaoEsquecerSenha();
         //Tela recuperar senha
@@ -87,7 +87,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void criarCadastro() {
         //Tela inicial
-        homepage.clickMenuLogin();
+        homepage.ButtonSignIn();
         //Tela login
         String emailTeste = "teste" + random.nextInt() + "@mail.com";
         loginpage.CompletarEmailCadastro(emailTeste);
