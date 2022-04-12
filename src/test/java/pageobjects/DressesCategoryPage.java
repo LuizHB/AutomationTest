@@ -71,5 +71,36 @@ public class DressesCategoryPage extends BaseActionElement {
     public void MenuDressesSummer() {
         summerDressesMenuDresses.click();
     }
+    public void AddCartFirstCasualDress() {
+        addCartFirstCasualDress.click();
+    }
+    public void AddCartFirstEveningDress() {
+        addCartFirstEveningDress.click();
+    }
+    public void AddCartFirstSummerDress() {
+        addCartFirstSummerDress.click();
+    }
+    public void AddCartSecondSummerDress() {
+        addCartSecondSummerDress.click();
+    }
+    public void AddCartThirdSummerDress() {
+        addCartThirdSummerDress.click();
+    }
+    public void MoreFirstCasualDress() {
+        moreFirstCasualDress.click();
+    }
+    public void MoreFirstEveningDress() {
+        moreFirstEveningDress.click();
+    }
+    public void MoreFirstSummerDress() {
+        moreFirstSummerDress.click();
+    }
+    public void MoreSecondSummerDress() {
+        moreSecondSummerDress.click();
+    }
+    public void MoreThirdSummerDress() {
+        moreThirdSummerDress.click();
+    }
+
 
 }
