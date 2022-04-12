@@ -54,7 +54,31 @@ public class DressesCategoryPage extends BaseActionElement {
     private WebElement continueShopping;
 
     @FindBy(xpath = "//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a")
-    private WebElement proceedToCheckout;
+    private WebElement proceedToCheckoutShoppingPage;
+
+    @FindBy(xpath = "//*[@id=\"center_column\"]/p[2]/a[1]")
+    private WebElement proceedToCheckoutSummaryPage;
+
+    @FindBy(xpath = "//*[@id=\"center_column\"]/form/p/button")
+    private WebElement proceedToCheckoutAddress;
+
+    @FindBy(xpath = "//*[@id=\"cgv\"]")
+    private WebElement boxTermsAgreement;
+
+    @FindBy(xpath = "//*[@id=\"form\"]/p/button")
+    private WebElement proceedToCheckoutShippingArea;
+
+    @FindBy(xpath = "//*[@id=\"HOOK_PAYMENT\"]/div[1]/div/p/a")
+    private WebElement payBankWire;
+
+    @FindBy(xpath = "//*[@id=\"HOOK_PAYMENT\"]/div[2]/div/p/a")
+    private WebElement payByCheck;
+
+    @FindBy(xpath = "//*[@id=\"cart_navigation\"]/button")
+    private WebElement buttonConfirmOrder;
+
+    @FindBy(xpath = "//*[@id=\"center_column\"]/div")
+    private WebElement boxConfirmation;
 
     public DressesCategoryPage() {
         PageFactory.initElements(Browser.getCurrentDriver(), this);
@@ -116,5 +140,30 @@ public class DressesCategoryPage extends BaseActionElement {
         moreThirdSummerDress.click();
     }
 
+    public void ProceedToCheckoutShoppingPage() {
+        proceedToCheckoutShoppingPage.click();
+    }
 
+    public void ProceedToCheckoutPayingPage() {
+        proceedToCheckoutSummaryPage.click();
+    }
+
+    public void ProceedToCheckoutAddressPage() {
+        proceedToCheckoutAddress.click();
+    }
+
+    public void BoxTermsAgreement() {
+        boxTermsAgreement.click();
+    }
+    public void ProceedToCheckoutShippingArea() {
+        proceedToCheckoutShippingArea.click();
+    }
+
+    public void ButtonConfirmOrder(){
+        buttonConfirmOrder.click();
+    }
+
+    public String BoxConfirmation() {
+        return boxConfirmation.getText();
+    }
 }
