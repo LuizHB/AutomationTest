@@ -35,69 +35,83 @@ public class DressesCategoryPage extends BaseActionElement {
     @FindBy(xpath = "//*[@id=\"center_column\"]/ul/li[1]/div/div[2]/div[2]/a[1]")
     private WebElement addCartFirstSummerDress;
 
-    @FindBy(xpath ="//*[@id='center_column']/ul/li[1]/div/div[2]/div[2]/a[2]")
+    @FindBy(xpath = "//*[@id='center_column']/ul/li[1]/div/div[2]/div[2]/a[2]")
     private WebElement moreFirstSummerDress;
 
     @FindBy(xpath = "//*[@id=\"center_column\"]/ul/li[2]/div/div[2]/div[2]/a[1]")
     private WebElement addCartSecondSummerDress;
 
-    @FindBy(xpath ="//*[@id=\"center_column\"]/ul/li[2]/div/div[2]/div[2]/a[2]")
+    @FindBy(xpath = "//*[@id=\"center_column\"]/ul/li[2]/div/div[2]/div[2]/a[2]")
     private WebElement moreSecondSummerDress;
 
     @FindBy(xpath = "//*[@id=\"center_column\"]/ul/li[3]/div/div[2]/div[2]/a[1]")
     private WebElement addCartThirdSummerDress;
 
-    @FindBy(xpath ="//*[@id=\"center_column\"]/ul/li[3]/div/div[2]/div[2]/a[2]")
+    @FindBy(xpath = "//*[@id=\"center_column\"]/ul/li[3]/div/div[2]/div[2]/a[2]")
     private WebElement moreThirdSummerDress;
 
-    @FindBy(xpath ="//*[@id='layer_cart']/div[1]/div[2]/div[4]/span")
+    @FindBy(xpath = "//*[@id='layer_cart']/div[1]/div[2]/div[4]/span")
     private WebElement continueShopping;
 
-    @FindBy(xpath ="//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a")
+    @FindBy(xpath = "//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a")
     private WebElement proceedToCheckout;
 
     public DressesCategoryPage() {
         PageFactory.initElements(Browser.getCurrentDriver(), this);
     }
 
-    public void MenuDresses() { menuDresses.click();}
+    public void MenuDresses() {
+        menuDresses.click();
+    }
 
     public void MenuDressesCasual() {
         casualDressesMenuDresses.click();
     }
+
     public void MenuDressesEvening() {
         eveningDressesMenuDresses.click();
     }
+
     public void MenuDressesSummer() {
         summerDressesMenuDresses.click();
     }
+
     public void AddCartFirstCasualDress() {
         addCartFirstCasualDress.click();
     }
+
     public void AddCartFirstEveningDress() {
         addCartFirstEveningDress.click();
     }
+
     public void AddCartFirstSummerDress() {
         addCartFirstSummerDress.click();
     }
+
     public void AddCartSecondSummerDress() {
         addCartSecondSummerDress.click();
     }
+
     public void AddCartThirdSummerDress() {
         addCartThirdSummerDress.click();
     }
+
     public void MoreFirstCasualDress() {
         moreFirstCasualDress.click();
     }
+
     public void MoreFirstEveningDress() {
         moreFirstEveningDress.click();
     }
+
     public void MoreFirstSummerDress() {
         moreFirstSummerDress.click();
     }
+
     public void MoreSecondSummerDress() {
         moreSecondSummerDress.click();
     }
+
     public void MoreThirdSummerDress() {
         moreThirdSummerDress.click();
     }
