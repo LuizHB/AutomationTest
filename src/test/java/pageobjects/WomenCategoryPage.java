@@ -40,7 +40,7 @@ public class WomenCategoryPage extends BaseActionElement {
 
     @FindBy(xpath = "//*[@id=\"categories_block_left\"]/div/ul/li[2]/ul/li[3]/a")
     private WebElement summerDressesButtonMenuWomen;
-    
+
 
     public WomenCategoryPage() {
         PageFactory.initElements(Browser.getCurrentDriver(), this);
