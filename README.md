@@ -23,5 +23,9 @@ Second method is found in /src/test/java/test/ShoppingTest.java
 - Recovery of forgotten password
 - Account creation
 
-## List of extra methods:
-- Successful purchase
+## Extra tests:
+- Successful purchase with bank wire
+
+## Tests to do:
+- [ ] Successful purchase with check
+- [ ] New clothes and categories
