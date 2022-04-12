@@ -144,7 +144,7 @@ public class DressesCategoryPage extends BaseActionElement {
         proceedToCheckoutShoppingPage.click();
     }
 
-    public void ProceedToCheckoutPayingPage() {
+    public void ProceedToCheckoutSummaryPage() {
         proceedToCheckoutSummaryPage.click();
     }
 
@@ -158,7 +158,8 @@ public class DressesCategoryPage extends BaseActionElement {
     public void ProceedToCheckoutShippingArea() {
         proceedToCheckoutShippingArea.click();
     }
-
+    public void PayBankWire(){payBankWire.click();}
+    public void PayByCheck(){payByCheck.click();}
     public void ButtonConfirmOrder(){
         buttonConfirmOrder.click();
     }
