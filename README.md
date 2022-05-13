@@ -1,11 +1,11 @@
 # AutomationTest
 
-![Badge](http://img.shields.io/static/v1?label=STATUS&message=UPGRADING&color=BRIGHTGREEN&style=for-the-badge)
+![Badge](http://img.shields.io/static/v1?label=STATUS&message=UPDATING&color=BRIGHTGREEN&style=for-the-badge)
 
 ![JAVA](http://img.shields.io/static/v1?label=Java-jdk&message=v17.0.2&color=blue)
 
 
-Project using automation methods in a website and a project plan. The website used is http://automationpractice.com/index.php
+Project based in Java + Selenium using automation methods. The project runs in a website with a project plan. The website used is http://automationpractice.com/index.php
 
 A sample with the methods without using the project plan can be found in /src/test/java/AutomationSample.java
 
