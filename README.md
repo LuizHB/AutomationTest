@@ -7,11 +7,11 @@
 
 Project based in Java + Selenium using automation methods. The project runs in a website with a project plan. The website used is http://automationpractice.com/index.php
 
-A sample with the methods without using the project plan can be found in /src/test/java/AutomationSample.java
+A sample with the methods without using the project plan can be found in [AutomationSample.java](/src/test/java/AutomationSample.java)
 
-The main method of the project plan is found in /src/test/java/test/LoginTest.java
+The main method of the project plan is found in [LoginTest.java](/src/test/java/test/LoginTest.java)
 
-Second method is found in /src/test/java/test/ShoppingTest.java
+Second method is found in [ShoppingTest.java](/src/test/java/test/ShoppingTest.java)
 
 ## List of tests (main method):
 - Successful login
