@@ -5,7 +5,7 @@
 ![JAVA](http://img.shields.io/static/v1?label=Java-jdk&message=v17.0.2&color=blue)
 
 
-Project based in Java + Selenium using automated test methods. The project runs in a website with a project plan. The website used is http://automationpractice.com/index.php
+Project based on Java + Selenium using automated test methods. The project runs in a website with a project plan. The website used is http://automationpractice.com/index.php
 
 A sample with the methods without using the project plan can be found in [AutomationSample.java](/src/test/java/AutomationSample.java)
 
